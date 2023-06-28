@@ -1,13 +1,19 @@
+import Greeting from './components/Greeting';
 import logo from './logo.svg';
 import './App.css';
+
+const students = ['Cihan', 'Max', 'Danny', 'Pat', 'Lorenzo']
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {students.map(stud => (
+          <Greeting name={stud} />
+        ))}
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          I'm getting hungry!
         </p>
         <a
           className="App-link"
@@ -15,8 +21,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React (at Boca Code)
         </a>
+        <Greeting name={"Kevin"} />
       </header>
     </div>
   );
